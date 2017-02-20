@@ -30,3 +30,7 @@ endif(USE_)
 
 add_executable(cmaketutorial ${SOURCE_FILES})
 target_link_libraries (cmaketutorial ${LIBS})
+enable_testing()
+add_test(num1 cmaketutorial  )
+set_tests_properties(num1 PROPERTIES
+        PASS_REGULAR_EXPRESSION "Hello")
