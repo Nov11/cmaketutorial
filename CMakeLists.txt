@@ -30,7 +30,17 @@ endif(USE_)
 
 add_executable(cmaketutorial ${SOURCE_FILES})
 target_link_libraries (cmaketutorial ${LIBS})
-enable_testing()
+#enable_testing()
+# or use this one below  :
+# param in 'include' is case sensitive;
+
 add_test(num1 cmaketutorial  )
 set_tests_properties(num1 PROPERTIES
         PASS_REGULAR_EXPRESSION "Hello")
+include (CheckFunctionExists)
+check_function_exists (log HAVE_LOG)
+check_function_exists (exp HAVE_EXP)
+include(CTest)#it's ok to place it here
+
+include(InstallRequiredSystemLibraries)
+include(CPack)
