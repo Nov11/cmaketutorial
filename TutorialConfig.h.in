@@ -1,0 +1,10 @@
+//
+// Created by c6s on 17-2-20.
+//
+
+#ifndef CMAKETUTORIAL_TUTORIALCONFIG_H_IN_H
+#define CMAKETUTORIAL_TUTORIALCONFIG_H_IN_H
+#define Tutorial_VERSION_MAJOR @Tutorial_VERSION_MAJOR@
+#define Tutorial_VERSION_MINOR @Tutorial_VERSION_MINOR@
+#cmakedefine USE_
+#endif //CMAKETUTORIAL_TUTORIALCONFIG_H_IN_H
